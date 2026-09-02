@@ -1,0 +1,6 @@
+ErratumChinesePatch bundles SourceHanSansSC-Regular.otf.
+Copyright 2014-2025 Adobe. Licensed under the SIL Open Font License 1.1.
+The full license is included as fonts\LICENSE.SourceHanSans.txt.
+
+BepInEx is redistributed as its unmodified x64 5.4.23.5 release files.
+Its license copy is included at BepInEx\LICENSE.BepInEx.txt.

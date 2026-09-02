@@ -1,0 +1,19 @@
+Erratum 简体中文补丁
+
+安装：
+1. 找到 Erratum.exe 所在的游戏根目录。
+2. 把本压缩包内的全部文件直接解压到该目录；不要多套一层文件夹。
+3. 正常启动游戏。补丁直接覆盖默认英文显示，不新增语言菜单。
+
+注意：如果复制了一个新的干净游戏目录，必须把本压缩包重新解压到这个新目录；补丁文件不会从原游戏目录自动跟随复制。
+
+本补丁不改写游戏资源封包和存档，不需要运行安装脚本。
+
+卸载：
+- 如果 BepInEx 是随本补丁首次安装，可删除 winhttp.dll、doorstop_config.ini、.doorstop_version 和 BepInEx 目录。
+- 如果游戏原本已有 BepInEx，只删除 BepInEx\plugins\ErratumChinesePatch，避免误删其他模组。
+
+兼容基线：Unity 2022.3.62f2；Erratum.exe SHA-256
+16572716a82b6f90fd5cf8e2989ec82d914df05f6fbd2f578e8158ea7b153577
+
+若游戏更新后补丁失效，请先核对版本，不要把旧补丁强行写入新的游戏封包。

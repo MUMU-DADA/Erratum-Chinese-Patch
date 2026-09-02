@@ -1,0 +1,18 @@
+4 commits since v5.4.23.4
+
+Changelog (excluding merges):
+* (57f1fb85) [ManlyMarco] Bump version number
+* (37f0a9aa) [Soggy_Pancake] v5: Fix log writer errors for Unity 6 (#1264)
+* (3e8aebdb) [Arrowmaster] Upgrade Doorstop to version 4.5.0 (#1259)
+* (8e9afa93) [Ploo] Fix for unity 2022.3.62f3 not having get_graphicsDeviceID (#1235)
+2026-09-02
+- 公开发布表改为 SHA-256 + UTF-16 长度匹配，不再携带可还原的英文原文；746 条旧规则逐条迁移一致。
+- 修复 Erratum 场景切换会清理 BepInEx 管理对象、导致插件只执行 Awake 随后失效的问题；默认启用 HideManagerGameObject，插件也主动设置 HideAndDontSave。
+- 改为从随包 OTF 直接预渲染静态 TMP SDF 字形图集，并作为原 TMP 字体的回退字库；修复动态系统字体无法生成 TMP_FontAsset 而显示方框的问题。
+- 移除 Unity/TMP 原生桥接 setter 的 Harmony detour，静态界面改由持续扫描覆盖；对白、交互和提示继续使用游戏自有托管入口。
+- 修复对白脚本 CRLF 行尾回车被纳入正文导致精确译文全部失配的问题；匹配时规范化行尾并保留原始换行符。
+- 修复 BepInEx 因插件版本字符串含 prerelease 后缀而跳过插件的问题。
+- 修复 TMP SetText 前缀参数绑定，并将各文本入口改为逐项容错注册，避免单个 Harmony 入口阻断整个插件。
+- 对话脚本在解析前直接替换说话人和正文，并覆盖 TMP SetText 入口。
+- 增加对话/交互 `Type()` 协程入口和 `Tooltip.SetText(string)` 的直接补丁；即使 Unity/TMP 基类 setter 未被运行时转接，对话和提示文本也会在显示前完成替换。
+- 重新生成 746 条翻译规则。

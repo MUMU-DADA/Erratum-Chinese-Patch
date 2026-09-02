@@ -1,0 +1,35 @@
+# Game-owned files and local extraction/audit output
+/extracted/
+/Erratum_Data/
+/MonoBleedingEdge/
+/Erratum.exe
+*.assets
+*.resource
+
+# Downloaded development toolchains and archives
+/tools/vendor/
+/tools/vendor-archives/
+/tools-src/
+
+# Build output and caches
+/dist/
+/plugin-src/**/bin/
+/plugin-src/**/obj/
+*.pdb
+*.py[cod]
+__pycache__/
+
+# Runtime logs and generated BepInEx state
+*.log
+/payload/BepInEx/cache/
+
+# Local secrets and editor/OS state
+.env
+.env.*
+!.env.example
+*.user
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

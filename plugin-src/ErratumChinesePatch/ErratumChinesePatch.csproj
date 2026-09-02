@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>ErratumChinesePatch</AssemblyName>
+    <RootNamespace>ErratumChinesePatch</RootNamespace>
+    <Deterministic>true</Deterministic>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <PathMap>$(MSBuildProjectDirectory)=/_/</PathMap>
+    <ErratumManagedDir Condition="'$(ErratumManagedDir)' == ''">$(MSBuildProjectDirectory)\..\..\..\Erratum_Data\Managed</ErratumManagedDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BepInEx" HintPath="..\..\payload\BepInEx\core\BepInEx.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="..\..\payload\BepInEx\core\0Harmony.dll" Private="false" />
+    <Reference Include="UnityEngine" HintPath="$(ErratumManagedDir)\UnityEngine.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(ErratumManagedDir)\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="UnityEngine.TextRenderingModule" HintPath="$(ErratumManagedDir)\UnityEngine.TextRenderingModule.dll" Private="false" />
+    <Reference Include="UnityEngine.TextCoreFontEngineModule" HintPath="$(ErratumManagedDir)\UnityEngine.TextCoreFontEngineModule.dll" Private="false" />
+    <Reference Include="UnityEngine.UI" HintPath="$(ErratumManagedDir)\UnityEngine.UI.dll" Private="false" />
+    <Reference Include="Unity.TextMeshPro" HintPath="$(ErratumManagedDir)\Unity.TextMeshPro.dll" Private="false" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,22 @@
+* text=auto
+
+.gitattributes text eol=lf
+.gitignore text eol=lf
+*.cs text eol=lf
+*.csproj text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.ps1 text eol=crlf
+*.txt text eol=crlf
+*.cfg text eol=crlf
+*.ini text eol=crlf
+*.csv -text whitespace=-trailing-space
+*.tsv -text whitespace=-trailing-space
+payload/BepInEx/core/*.xml -text whitespace=-trailing-space
+
+*.dll binary
+*.exe binary
+*.otf binary
+*.png binary
+*.jpg binary
+*.zip binary
